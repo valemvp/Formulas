@@ -3,7 +3,7 @@
     <string name="app_name">Formulando</string>
     <string-array name="opciones">
         <item>Force</item>
-        <item>Acelerationn</item>
+        <item>Aceleration</item>
         <item>Speed</item>
     </string-array>
     <string name="formulando">Formulating</string>

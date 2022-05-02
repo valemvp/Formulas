@@ -1,8 +1,9 @@
 package com.example.formulas
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity4 : AppCompatActivity() {
 
@@ -24,13 +25,13 @@ class MainActivity4 : AppCompatActivity() {
 
         val f = fuerza(masa, acel)
 
-        //tvEn1.text = "Para una masa de $masa [kg]"
-        //tvEn2.text = "con una aceleracion de $acel [m/s]"
-        //tvResp.text = "El valor de la fuerza es $f [N]"
+        tvEn1.text = "Para una masa de $masa [kg]"
+        tvEn2.text = "con una aceleracion de $acel [m/s]"
+        tvResp.text = "El valor de la fuerza es $f [N]"
 
-        tvEn1.text = getString(R.string.p_masa,masa)
-        tvEn2.text = getString(R.string.p_acel,acel)
-        tvResp.text = getString(R.string.msj_fuerza,f)
+        //tvEn1.text = String.format(getString(R.string.p_masa), masa)
+        //tvEn2.text = String.format(getString(R.string.p_acel),acel)
+        //tvResp.text = String.format(getString(R.string.msj_fuerza),f)
     }
 
     fun fuerza(masa: Float?, aceleracion: Float?): Float? {

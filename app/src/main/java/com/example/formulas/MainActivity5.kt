@@ -21,25 +21,28 @@ class MainActivity5 : AppCompatActivity() {
         tvEn3 = findViewById(R.id.tvEn3)
 
         val bundle = intent.extras
-        val vel1 = 15.5
-        val velF = 10.2
-        val t = 5
+        val vel1 = bundle?.getFloat("velI")
+        val velF = bundle?.getFloat("velF")
+        val t = bundle?.getFloat("tiempo")
 
         val a = aceleracion(vel1,velF,t)
 
         tvEn1.text = "A una velocidad inicial de $vel1 [m/s],"
         tvEn2.text = "una velocidad final de $velF [m/s]"
         tvEn2.text = "en un tiempo de $t [s]"
-        tvResp.text = "El valor de la aceleración es $a [m/s^2]"
+        tvResp.text = "El valor de la aceleración es \n $a [m/s^2]"
 
-        //tvEn1.text = getString(R.string.p_masa,masa)
-        //tvEn2.text = getString(R.string.p_acel,acel)
-        //tvResp.text = getString(R.string.msj_fuerza,f)
+        //tvEn1.text = String.format(getString(R.string.p_vel1),vel1)
+        //tvEn2.text = String.format(getString(R.string.p_velF),velF)
+        //tvEn3.text = String.format(getString(R.string.p_tiempo),t)
+        //tvResp.text = String.format(getString(R.string.msj_acel),a)
     }
 
-    private fun aceleracion(vel1: Double, velF: Double, t: Int?): Double? {
+    private fun aceleracion(vel1: Float?, velF: Float?, t: Float?): Float? {
         if (t != null) {
-            return (vel1 - velF!!)/ t
+            if (velF != null) {
+                return (velF - vel1!!)/ t
+            }
         }
         return null
     }

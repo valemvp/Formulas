@@ -89,11 +89,11 @@
         tools:text="@string/enunciado2" />
 
     <TextView
-        android:id="@+id/tvFuerza"
+        android:id="@+id/tvRapidez"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/simplicity"
-        android:text="@string/fuerza"
+        android:text="@string/rapidez"
         android:textColor="@color/black"
         android:textSize="40sp"
         android:textStyle="bold"

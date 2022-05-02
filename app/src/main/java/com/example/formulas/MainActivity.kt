@@ -21,9 +21,6 @@ open class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        etMasa = findViewById(R.id.etMasa)
-        etAceleracion = findViewById(R.id.etAceleracion)
-
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
         setContentView(mBinding.root)
@@ -41,11 +38,11 @@ open class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, lista[p2], Toast.LENGTH_LONG).show()
                 if(p0?.getItemAtPosition(p2)?.equals(lista[1]) == true){
                     startActivity(intent1)
-                    finish()
+                    //finish()
 
                 } else if(p0?.getItemAtPosition(p2)?.equals(lista[2]) == true){
                     startActivity(intent2)
-                    finish()
+                    //finish()
                 }
                 
             }
@@ -54,6 +51,9 @@ open class MainActivity : AppCompatActivity() {
 
             }
         }
+
+        etMasa = findViewById(R.id.etMasa)
+        etAceleracion = findViewById(R.id.etAceleracion)
 
     }
 

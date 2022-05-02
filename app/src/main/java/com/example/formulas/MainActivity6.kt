@@ -19,18 +19,18 @@ class MainActivity6 : AppCompatActivity() {
         tvEn2 = findViewById(R.id.tvEn2)
 
         val bundle = intent.extras
-        val dist = bundle?.getFloat("masa")
-        val t = bundle?.getFloat("aceleracion")
+        val dist = bundle?.getFloat("dist")
+        val t = bundle?.getFloat("tiempo")
 
         val v = rapidez(dist, t)
 
-        //tvEn1.text = "Para una masa de $masa [kg]"
-        //tvEn2.text = "con una aceleracion de $acel [m/s]"
-        //tvResp.text = "El valor de la fuerza es $f [N]"
+        tvEn1.text = "Para una distancia de $dist [m]"
+        tvEn2.text = "en un tiempo de $t [s]"
+        tvResp.text = "El valor de la rapidez es \n $v [m/s]"
 
-        tvEn1.text = getString(R.string.p_dis,dist)
-        tvEn2.text = getString(R.string.p_tiempo,t)
-        tvResp.text = getString(R.string.msj_rapidez,v)
+        //tvEn1.text = String.format(getString(R.string.p_dis),dist)
+        //tvEn2.text = String.format(getString(R.string.p_tiempo),t)
+        //tvResp.text = String.format(getString(R.string.msj_rapidez),v)
     }
 
     fun rapidez(distancia: Float?, tiempo: Float?): Float? {
