@@ -33,7 +33,7 @@
         android:ems="10"
         android:fontFamily="@font/simplicity"
         android:hint="@string/masa"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -54,7 +54,7 @@
         android:ems="10"
         android:fontFamily="@font/simplicity"
         android:hint="@string/aceleracion"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -132,6 +132,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.22" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

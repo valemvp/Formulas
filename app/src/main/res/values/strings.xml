@@ -5,10 +5,12 @@
     <string name="creador">Creado por: Valeria M. Villaseñor Peña</string>
     <string name="aceleracion">Aceleración</string>
     <string name="masa">Masa</string>
+    <string name="fuerza">Fuerza</string>
+    <string name="rapidez">Rapidez</string>
     <string name="calcular">Calcular</string>
     <string name="resp">Respuesta</string>
-    <string name="todo">TODO</string>
-    <string name="formulas">Spinner</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="formulas" translatable="false">Spinner</string>
     <string-array name="opciones">
         <item>Fuerza</item>
         <item>Aceleración</item>
@@ -16,14 +18,24 @@
     </string-array>
     <string name="ingresa_val">Por favor ingresa un valor</string>
     <string name="val_req">Valor requerido</string>
-    <string name="enunciado1">enunciado 1</string>
-    <string name="enunciado2">enunciado 2</string>
-    <string name="enunciado3">enunciado 3</string>
-    <string name="p_masa">Para una masa de %1$d [kg]</string>
-    <string name="p_acel">con una aceleracion de %1$d [m/s]</string>
-    <string name="msj_fuerza">El valor de la fuerza es de %1$d [N]</string>
     <string name="velF">Velocidad final</string>
     <string name="velI">Velocidad inicial</string>
     <string name="tiempo">Tiempo</string>
     <string name="distancia">Distancia</string>
+    <string name="enunciado1">enunciado 1</string>
+    <string name="enunciado2">enunciado 2</string>
+    <string name="enunciado3">enunciado 3</string>
+    <string name="p_masa">Para una masa de %d [kg]</string>
+    <string name="p_acel">con una aceleracion de %d [m/s]</string>
+    <string name="msj_fuerza">El valor de la fuerza es de %d [N]</string>
+    <string name="p_vel1">A una velocidad inicial de %d [m/s],</string>
+    <string name="p_velF">una velocidad final de %d [m/s]</string>
+    <string name="p_tiempo">en un tiempo de %d [s]</string>
+    <string name="msj_acel">El valor de la aceleracion es de %d [m/s^2]</string>
+    <string name="p_dis">Para una distancia de %d [m]</string>
+    <string name="msj_rapidez">El valor de la rapidez es de %d [m/s]</string>
+    <string name="val_noA">Valor no autorizado</string>
+    <string name="val_err">Cambia valor</string>
+
+
 </resources>

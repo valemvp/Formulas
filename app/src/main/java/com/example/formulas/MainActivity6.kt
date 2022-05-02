@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 
-class MainActivity4 : AppCompatActivity() {
+class MainActivity6 : AppCompatActivity() {
 
     private lateinit var tvResp: TextView
     private lateinit var tvEn1: TextView
@@ -12,33 +12,33 @@ class MainActivity4 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main4)
+        setContentView(R.layout.activity_main6)
 
         tvResp = findViewById(R.id.tvResp)
         tvEn1 = findViewById(R.id.tvEn1)
         tvEn2 = findViewById(R.id.tvEn2)
 
         val bundle = intent.extras
-        val masa = bundle?.getFloat("masa")
-        val acel = bundle?.getFloat("aceleracion")
+        val dist = bundle?.getFloat("masa")
+        val t = bundle?.getFloat("aceleracion")
 
-        val f = fuerza(masa, acel)
+        val v = rapidez(dist, t)
 
         //tvEn1.text = "Para una masa de $masa [kg]"
         //tvEn2.text = "con una aceleracion de $acel [m/s]"
         //tvResp.text = "El valor de la fuerza es $f [N]"
 
-        tvEn1.text = getString(R.string.p_masa,masa)
-        tvEn2.text = getString(R.string.p_acel,acel)
-        tvResp.text = getString(R.string.msj_fuerza,f)
+        tvEn1.text = getString(R.string.p_dis,dist)
+        tvEn2.text = getString(R.string.p_tiempo,t)
+        tvResp.text = getString(R.string.msj_rapidez,v)
     }
 
-    fun fuerza(masa: Float?, aceleracion: Float?): Float? {
-        if (masa != null) {
-            return masa * aceleracion!!
+    fun rapidez(distancia: Float?, tiempo: Float?): Float? {
+        if (tiempo != null) {
+            if (distancia != null) {
+                return distancia/tiempo
+            }
         }
         return null
     }
-
 }
-

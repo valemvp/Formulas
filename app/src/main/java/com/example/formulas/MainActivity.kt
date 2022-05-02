@@ -20,20 +20,33 @@ open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        etMasa = findViewById(R.id.etMasa)
+        etAceleracion = findViewById(R.id.etAceleracion)
+
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
         setContentView(mBinding.root)
 
         var lista = resources.getStringArray(R.array.opciones)
-        val aaFormulas = ArrayAdapter(
-            this, android.R.layout.simple_spinner_dropdown_item, lista)
+        val aaFormulas = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, lista)
 
         mBinding.spinner.adapter = aaFormulas
+
+        val intent1 = Intent(this, MainActivity2::class.java)
+        val intent2 = Intent(this, MainActivity3::class.java)
 
         mBinding.spinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 Toast.makeText(this@MainActivity, lista[p2], Toast.LENGTH_LONG).show()
+                if(p0?.getItemAtPosition(p2)?.equals(lista[1]) == true){
+                    startActivity(intent1)
+                    finish()
 
+                } else if(p0?.getItemAtPosition(p2)?.equals(lista[2]) == true){
+                    startActivity(intent2)
+                    finish()
+                }
                 
             }
 
@@ -41,9 +54,6 @@ open class MainActivity : AppCompatActivity() {
 
             }
         }
-
-        etMasa = findViewById(R.id.etMasa)
-        etAceleracion = findViewById(R.id.etAceleracion)
 
     }
 
@@ -54,15 +64,11 @@ open class MainActivity : AppCompatActivity() {
             val masa = etMasa.text.toString().toFloat()
             val aceleracion = etAceleracion.text.toString().toFloat()
 
-            //val f = fuerza(masa,aceleracion)
             val intent = Intent(this, MainActivity4::class.java)
             val parametros = Bundle()
-            val f = fuerza(masa,aceleracion)
-            val fza=f
 
             parametros.putFloat("masa", masa)
             parametros.putFloat("aceleracion", aceleracion)
-            parametros.putFloat("fuerza", fza)
             intent.putExtras(parametros)
             startActivity(intent)
 
@@ -76,10 +82,6 @@ open class MainActivity : AppCompatActivity() {
             etAceleracion.requestFocus()
         }
 
-    }
-
-    fun fuerza(masa: Float, aceleracion: Float): Float {
-        return masa * aceleracion
     }
 
 }

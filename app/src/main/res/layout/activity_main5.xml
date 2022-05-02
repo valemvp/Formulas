@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backb2"
-    tools:context=".MainActivity4">
+    tools:context=".MainActivity5">
 
     <TextView
         android:id="@+id/tvTitulo"
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58"
+        app:layout_constraintVertical_bias="0.62"
         tools:text="@string/resp" />
 
     <TextView
@@ -73,8 +73,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.42"
+        app:layout_constraintVertical_bias="0.4"
         tools:text="@string/enunciado1" />
+
+    <TextView
+        android:id="@+id/tvEn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oswaldheavy"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48"
+        tools:text="@string/enunciado2" />
 
     <TextView
         android:id="@+id/tvEn2"
@@ -86,14 +99,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/enunciado2" />
+        app:layout_constraintVertical_bias="0.55"
+        tools:text="@string/enunciado3" />
 
     <TextView
-        android:id="@+id/tvRapidez"
+        android:id="@+id/tvAcelera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/simplicity"
-        android:text="@string/rapidez"
+        android:text="@string/aceleracion"
         android:textColor="@color/black"
         android:textSize="40sp"
         android:textStyle="bold"

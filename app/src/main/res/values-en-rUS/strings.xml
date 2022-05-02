@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Formulando</string>
+    <string-array name="opciones">
+        <item>Force</item>
+        <item>Acelerationn</item>
+        <item>Speed</item>
+    </string-array>
+    <string name="formulando">Formulating</string>
+    <string name="version">Version 1 .0</string>
+    <string name="creador">Created by: Valeria M. Villaseñor Peña</string>
+    <string name="aceleracion">Aceleration</string>
+    <string name="masa">Mass</string>
+    <string name="fuerza">Force</string>
+    <string name="rapidez">Speed</string>
+    <string name="calcular">Calculate</string>
+    <string name="resp">Answer</string>
+    <string name="ingresa_val">Please type a value</string>
+    <string name="val_req">Required value</string>
+    <string name="velF">Final velocity</string>
+    <string name="velI">Inicial velocity</string>
+    <string name="tiempo">Time</string>
+    <string name="distancia">Distance</string>
+    <string name="enunciado1">sentence 1</string>
+    <string name="enunciado2">sentence 2</string>
+    <string name="enunciado3">sentence 3</string>
+    <string name="p_masa">For a mass of %d [kg]</string>
+    <string name="p_acel">with an aceleration of %d [m/s]</string>
+    <string name="msj_fuerza">The force value is %d [N]</string>
+    <string name="p_vel1">At an inicial velocity of %d [m/s]</string>
+    <string name="p_velF">a final velocity of  %d [m/s]</string>
+    <string name="p_tiempo">in a time of  %d [s]</string>
+    <string name="msj_acel">The aceleration value is  %d [m/s^2]</string>
+    <string name="p_dis">For a distance of  %d [m]</string>
+    <string name="msj_rapidez">The speed value id  %d [m/s]</string>
+    <string name="val_noA">Unauthorized value</string>
+    <string name="val_err">Change value</string>
+</resources>
